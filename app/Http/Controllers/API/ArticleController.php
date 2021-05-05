@@ -23,16 +23,32 @@ class ArticleController extends Controller
 
     public function destory(Request $request, $id)
     {
+        $article = Article::findOrFail($id);
+        
+        if ($article->exists()) {
+            $article->delete();
+        }
 
+        return response()->json($article,201);
     }
 
     public function update(Request $request, $id)
     {
+        $article = Article::findOrFail($id);
+        $article->fill($request->all());
+        if (!$article->isDirty()) {
+            return response()->noContent();
+        }
+        $article->save();
 
+        return response()->json($category, 201);
     }
 
     public function show(Request $request, $id)
     {
         return Article::findOrFail($id);
     }
+
+
+
 }
