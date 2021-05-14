@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\ArticleController;
 use App\Http\Controllers\API\CustomerController;
 use App\Http\Controllers\API\CategoryController;
+use App\Http\Controllers\API\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,6 @@ Route::apiResource("categories", CategoryController::class)->only(["index", "sto
 Route::get("categories/{category}/articles", [CategoryController::class, "articleList"]);
 Route::apiResource("customers", CustomerController::class);
 Route::apiResource("articles", ArticleController::class);
+
+//연습예제
+Route::apiResource("posts", PostController::class);
