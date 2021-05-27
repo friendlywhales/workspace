@@ -31,7 +31,7 @@ const Edit = () => {
             const result = res.data;
             const post = result.data;
             setTitle(post.title);
-            setDescription(post.description)
+            setDescription(post.description);
         })
     }, []);
 

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\TestController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes();
+Route::get('/test', [TestController::class, "index"])->middleware('auth');
 Route::get('/{any?}', function () {
     return view('welcome');
 })->where('any','^(?!api).*$');

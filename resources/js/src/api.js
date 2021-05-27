@@ -1,6 +1,6 @@
 const axios = window.axios;
 
-const BASE_API_URL = 'http://127.0.0.1:8000/api'
+const BASE_API_URL = 'http://medi.com/api'
 
 export default {
     getAllPosts: () =>
@@ -13,4 +13,6 @@ export default {
         axios.put(`${BASE_API_URL}/posts/${id}`, post),
     deletePost: (id) =>
         axios.delete(`${BASE_API_URL}/posts/${id}`),
+    addUser: (user) =>
+        axios.post(`${BASE_API_URL}/users`, user),
 }
