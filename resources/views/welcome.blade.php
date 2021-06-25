@@ -7,9 +7,9 @@
         <title>MEDIAIPLUS</title>
 
         <Link href="{{ asset('css/app.css')}}" rel="stylesheet" />
-        <!-- <script>
-            let name = "{{ $name ?? '' }}";
-        </script> -->
+        <script>
+            let isLoggedIn = {!! Auth::check() ? 1 : 0 !!}
+        </script>
     </head>
     <body>
         <div id="app">

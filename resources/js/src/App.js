@@ -7,6 +7,7 @@ import Edit from './components/Edit';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import SurveyCommon from './components/SurveyCommon';
+import SurveyCommon2 from './components/SurveyCommon2';
 import SurveyDepth01 from './components/SurveyDepth01';
 import PostDetail from './components/PostDetail';
 import AdminHome from './components/AdminHome';
@@ -32,7 +33,7 @@ import AdminHome from './components/AdminHome';
                 <Signup />
               </Route>
               <Route exact path="/surveyCommon">
-                <SurveyCommon />
+                <SurveyCommon2 />
               </Route>
               <Route exact path="/surveyDepth01">
                 <SurveyDepth01 />

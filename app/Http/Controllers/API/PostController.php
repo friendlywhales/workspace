@@ -67,4 +67,9 @@ class PostController extends Controller
             'data' => 'Post deleted.'
         ]);
     }
+
+    public function postListAll()
+    {
+        return PostResource::collection(Post::all());
+    }
 }

@@ -18,23 +18,27 @@ const Login = () => {
         <AppContainer
             title = "Login"
         >
-        <form>
+        <form method="POST" action="/login">
                 <div className="form-group">
                     <label>Email address</label>
-                    <input type="email" 
-                           className="form-control" 
-                           placeholder="Enter email" 
-                           onChange={(e)=>setEmail(e.target.value)}
-                           />
+                    <input 
+                        name="email"
+                        type="email" 
+                        className="form-control" 
+                        placeholder="Enter email" 
+                        onChange={(e)=>setEmail(e.target.value)}
+                    />
                 </div>
 
                 <div className="form-group">
                     <label>Password</label>
-                    <input type="password" 
-                           className="form-control" 
-                           placeholder="Enter password"
-                           onChange={(e)=>setPassword(e.target.value)} 
-                           />
+                    <input 
+                        name="password"
+                        type="password" 
+                        className="form-control" 
+                        placeholder="Enter password"
+                        onChange={(e)=>setPassword(e.target.value)} 
+                    />
                 </div>
 
                 <div className="form-group">

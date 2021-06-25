@@ -41,7 +41,7 @@ const HomeView = () => {
         }
 
         return posts.map((post)=>(
-           <div style={{paddingBottom:"1em"}}> 
+           <div style={{paddingBottom:"1em"}} key={post.id}> 
             <div className="card">
                 <h5 className="card-header">Featured</h5>
                     <div className="card-body">

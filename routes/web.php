@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,12 @@ use App\Http\Controllers\TestController;
 |
 */
 
-Auth::routes();
+//Auth::routes();
+Route::get('login', function () {
+    return view('welcome');
+});
+Route::post('login', [LoginController::class, "login"]);
+Route::post('logout', [LoginController::class, "logout"]);
 Route::get('/test', [TestController::class, "index"])->middleware('auth');
 Route::get('/{any?}', function () {
     return view('welcome');
